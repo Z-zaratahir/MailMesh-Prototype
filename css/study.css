@@ -1,0 +1,48 @@
+/* MailMesh D5 test build: study task bar (added for the study, outside the D4 interface). */
+#study-bar {
+  background: #1F2416;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-bottom: 4px solid #C9B6F2;
+  position: relative;
+  z-index: 100000;
+}
+#study-bar .sb-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+#study-bar .sb-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+#study-bar .sb-title { font-size: 15px; }
+#study-bar .sb-task { background: #C9B6F2; color: #1F2416; font-weight: 700; padding: 2px 10px; border-radius: 4px; }
+#study-bar .sb-right { display: flex; gap: 10px; }
+#study-bar .sb-btn {
+  min-height: 44px; padding: 8px 18px; font: inherit; font-weight: 700;
+  background: #FFFFFF; color: #1F2416; border: 2px solid #FFFFFF; border-radius: 6px; cursor: pointer;
+}
+#study-bar .sb-btn:disabled { background: transparent; color: #B9BCAE; border-color: #6B6F5E; cursor: not-allowed; }
+#study-bar .sb-btn:focus-visible, #study-bar a:focus-visible, #study-bar .sb-code:focus-visible {
+  outline: 3px solid #C9B6F2; outline-offset: 3px;
+}
+#study-bar .sb-note { margin-top: 10px; padding: 10px 12px; background: #F3EFFD; color: #1F2416; border-radius: 6px; }
+#study-bar .sb-result { margin-top: 12px; padding: 12px; background: #F7F6EF; color: #1F2416; border-radius: 6px; }
+#study-bar .sb-result-label { display: block; font-weight: 700; margin-bottom: 6px; }
+#study-bar .sb-code-row { display: flex; gap: 10px; align-items: stretch; flex-wrap: wrap; }
+#study-bar .sb-code {
+  flex: 1 1 320px; font-family: Consolas, "Courier New", monospace; font-size: 12px;
+  padding: 8px; border: 2px solid #5F6352; border-radius: 6px; resize: vertical; word-break: break-all;
+}
+#study-bar .sb-result .sb-btn { background: #4B5A2A; color: #FFFFFF; border-color: #4B5A2A; }
+#study-bar .sb-copied { margin: 6px 0 0; font-weight: 700; color: #1B6B3A; min-height: 1.2em; }
+#study-bar .sb-next { margin: 6px 0 0; }
+#study-bar .sb-next a { color: #4B5A2A; font-weight: 700; }
+
+#study-cover {
+  position: fixed; inset: 0; z-index: 99990;
+  background: #2B331A;
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+#study-cover .sc-box {
+  max-width: 520px; background: #FFFFFF; color: #1F2416; border-radius: 10px;
+  padding: 28px 32px; font-size: 16px; line-height: 1.5; margin-top: 80px;
+}
+#study-cover .sc-big { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+#study-cover p { margin: 0 0 10px; }
